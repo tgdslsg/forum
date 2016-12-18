@@ -1,11 +1,12 @@
+com\lsg\entity\LoginLog.class
 com\lsg\web\filter\AbstractFilter.class
 com\lsg\service\UserService.class
 com\lsg\exception\DataAccessException.class
 com\lsg\service\UserService$1.class
 com\lsg\web\user\ValidateEmailServlet.class
-com\lsg\entity\login_log.class
 com\lsg\dao\UserDao.class
 com\lsg\web\filter\EncodingFilter.class
+com\lsg\dao\LoginLogDao.class
 com\lsg\util\Page.class
 com\lsg\web\user\ValidateUserServlet.class
 com\lsg\web\HomeServlet.class
@@ -13,6 +14,7 @@ com\lsg\web\user\LoginServlet.class
 com\lsg\exception\ServiceException.class
 com\lsg\entity\User.class
 com\lsg\web\user\RegServlet.class
+com\lsg\service\UserService$2.class
 com\lsg\util\ConnectionManager.class
 com\lsg\util\StringUtils.class
 com\lsg\util\DbHelp.class
@@ -20,3 +22,4 @@ com\lsg\util\Email.class
 com\lsg\util\Config.class
 com\lsg\web\BaseServlet.class
 com\lsg\web\user\ActiveServlet.class
+com\lsg\web\user\FoundPasswordServlet.class
