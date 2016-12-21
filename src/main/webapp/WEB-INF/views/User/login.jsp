@@ -25,19 +25,19 @@
             <div class="control-group">
                 <label class="control-label">账号</label>
                 <div class="controls">
-                    <input type="text">
+                    <input type="text" name="username">
                 </div>
             </div>
             <div class="control-group">
                 <label class="control-label">密码</label>
                 <div class="controls">
-                    <input type="text">
+                    <input type="password" name="password">
                 </div>
             </div>
             <div class="control-group">
                 <label class="control-label"></label>
                 <div class="controls">
-                    <a href="/foundPassword">忘记密码</a>
+                    <a href="/foundpassword">忘记密码</a>
                 </div>
             </div>
 
@@ -52,5 +52,8 @@
     <!--box end-->
 </div>
 <!--container end-->
+<script src="/static/js/jquery-1.11.1.js"></script>
+<script src="/static/js/jquery.validate.min.js"></script>
+<script src="/static/js/user/login.js"></script>
 </body>
 </html>

@@ -6,8 +6,11 @@ com\lsg\service\UserService$1.class
 com\lsg\web\user\ValidateEmailServlet.class
 com\lsg\dao\UserDao.class
 com\lsg\web\filter\EncodingFilter.class
+com\lsg\dto\JsonResult.class
 com\lsg\dao\LoginLogDao.class
 com\lsg\util\Page.class
+com\lsg\web\user\SettingServlet.class
+com\lsg\web\user\LogoutServlet.class
 com\lsg\web\user\ValidateUserServlet.class
 com\lsg\web\HomeServlet.class
 com\lsg\web\user\LoginServlet.class
@@ -15,6 +18,7 @@ com\lsg\exception\ServiceException.class
 com\lsg\entity\User.class
 com\lsg\web\user\RegServlet.class
 com\lsg\service\UserService$2.class
+com\lsg\web\user\ResetPasswordServlet.class
 com\lsg\util\ConnectionManager.class
 com\lsg\util\StringUtils.class
 com\lsg\util\DbHelp.class

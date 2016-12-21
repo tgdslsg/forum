@@ -18,6 +18,6 @@ public class LogoutServlet extends BaseServlet {
 
         //resp.sendRedirect("/login?state=logout");
         req.setAttribute("message","你已安全退出");
-        forward("user/login",req,resp);
+        forward("User/login",req,resp);
     }
 }

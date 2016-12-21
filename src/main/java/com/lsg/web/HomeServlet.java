@@ -13,6 +13,6 @@ import java.io.IOException;
 public class HomeServlet extends BaseServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        forward("index",req,resp);
+        forward("User/index",req,resp);
     }
 }

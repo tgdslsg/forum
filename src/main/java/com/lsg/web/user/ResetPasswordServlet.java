@@ -31,10 +31,10 @@ public class ResetPasswordServlet extends BaseServlet {
 
                 req.setAttribute("user",user);
                 req.setAttribute("token",token);
-                forward("user/resetpassword",req,resp);
+                forward("User/resetpassword",req,resp);
             } catch (ServiceException ex) {
                 req.setAttribute("message",ex.getMessage());
-                forward("user/reset_error",req,resp);
+                forward("User/reset_error",req,resp);
             }
         }
     }

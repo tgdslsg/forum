@@ -22,7 +22,6 @@ $(function(){
             }
         },
         submitHandler:function(form){
-
             $.ajax({
                 url:"/login",
                 type:"post",

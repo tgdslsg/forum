@@ -22,7 +22,7 @@ public class RegServlet extends BaseServlet {
     private static Logger logger = LoggerFactory.getLogger(RegServlet.class);
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        forward("reg",req,resp);
+        forward("User/reg",req,resp);
     }
 
     @Override

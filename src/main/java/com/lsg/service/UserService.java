@@ -25,6 +25,7 @@ import static com.lsg.entity.User.USERSTATE_ACTIVE;
 
 public class UserService {
 
+
     private UserDao userDao = new UserDao();
     private LoginLogDao loginLogDao = new LoginLogDao();
     private static Logger logger = LoggerFactory.getLogger(UserService.class);
@@ -107,7 +108,7 @@ public class UserService {
                 //放入缓存等待6个小时
                 cache.put(uuid,username);
 
-                String html ="<h3>Dear "+username+":</h3>请点击<a href='"+url+"'>该链接</a>去激活你的账号. <br> 凯盛软件";
+                String html ="<h3>Dear "+username+":</h3>请点击<a href='"+url+"'>该链接</a>去激活你的账号. <br> ";
 
                 Email.sendHtmlEmail(email,"用户激活邮件",html);
             }
@@ -117,7 +118,7 @@ public class UserService {
 
     public User login(String username, String password, String ip) {
         User user = userDao.findByUserName(username);
-        if (user != null && DigestUtils.md5Hex("user.password.salt" + password).equals(user.getPassword())) {
+        if (user != null && DigestUtils.md5Hex( Config.get("user.password.salt")+ password).equals(user.getPassword())) {
             if (user.getState().equals(User.USERSTATE_ACTIVE)) {
                 //记录登录日志
                 LoginLog log = new LoginLog();
@@ -152,7 +153,7 @@ public class UserService {
                         @Override
                         public void run() {
                             String uuid = UUID.randomUUID().toString();
-                            String url = "http://bbs.kaishengit.com/foundpassword/newpassword?token=" + uuid;
+                            String url = "http://localhost/foundpassword/newpassword?token=" + uuid;
 
                             passwordCache.put(uuid,user.getUsername());
                             String html = user.getUsername()+"<br>请点击该<a href='"+url+"'>链接</a>进行找回密码操作，链接在30分钟内有效";
@@ -204,5 +205,38 @@ public class UserService {
             logger.info("{} 重置了密码",user.getUsername());
         }
     }
+    /**
+     * 修改用户邮箱
+     * user，email
+     */
+    public void updateEmail(User user,String email){
+        user.setEmail(email);
+        userDao.update(user);
+        logger.debug("修改{}的邮箱",user);
+    }
+    /**
+     *该秘密
+     */
+    public void updatePassword(User user,String newPassword,String oldPassword){
+        String salt = Config.get("user.password.salt");
+        if(DigestUtils.md5Hex( Config.get("user.password.salt")+ oldPassword).equals(user.getPassword())) {
 
+
+            System.out.println("jsk--------------");
+            newPassword = DigestUtils.md5Hex(salt + newPassword);
+            user.setPassword(newPassword);
+            userDao.update(user);
+            logger.debug("{}修改密码成功",user);
+        } else {
+            throw new ServiceException("原始密码错误");
+        }
+    }
+
+
+    //改头像
+    public void updateAvatar(User user, String fileKey) {
+        user.setAvatar(fileKey);
+        userDao.update(user);
+        System.out.println("updateAvatar修改头像成功");
+    }
 }

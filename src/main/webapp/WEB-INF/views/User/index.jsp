@@ -24,7 +24,64 @@
             <table class="talk-table">
                 <tr>
                     <td width="50">
-                        <img class="avatar" src="http://www.qqzhi.com/uploadpic/2015-01-10/213916684.jpg?imageView2/1/w/40/h/40" alt="">
+                        <img class="avatar" src="http://ohwn5gb62.bkt.clouddn.com/Fq_Y4G5A0q789Y77DGtT007W1P-f?imageView2/1/w/40/h/40" alt="">
+                    </td>
+                    <td width="80">
+                        <a href="">fankay</a>
+                    </td>
+                    <td width="auto">
+                        <a href="#">写了一个可以把你网站所有 js 代码格式化成圣诞树的 NodeJS 库： js2image</a>
+                    </td>
+                    <td width="50" align="center">
+                        <span class="badge">12</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="talk-item">
+            <table class="talk-table">
+                <tr>
+                    <td width="50">
+                        <img class="avatar" src="http://ohwn5gb62.bkt.clouddn.com/${fileKey}?imageView2/1/w/40/h/40" alt="">
+                    </td>
+                    <td width="80">
+                        <a href="">fankay</a>
+                    </td>
+                    <td width="auto">
+                        <a href="#">写了一个可以把你网站所有 js 代码格式化成圣诞树的 NodeJS 库： js2image</a>
+                    </td>
+                    <td width="50" align="center">
+                        <span class="badge">12</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="talk-item">
+            <table class="talk-table">
+                <tr>
+                    <td width="50">
+                        <img class="avatar" src="http://ohwn5gb62.bkt.clouddn.com/${fileKey}?imageView2/1/w/40/h/40" alt="">
+                    </td>
+                    <td width="80">
+                        <a href="">fankay</a>
+                    </td>
+                    <td width="auto">
+                        <a href="#">写了一个可以把你网站所有 js 代码格式化成圣诞树的 NodeJS 库： js2image</a>
+                    </td>
+                    <td width="50" align="center">
+                        <span class="badge">12</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="talk-item">
+            <table class="talk-table">
+                <tr>
+                    <td width="50">
+                        <img class="avatar" src="http://ohwn5gb62.bkt.clouddn.com/Fq_Y4G5A0q789Y77DGtT007W1P-f?imageView2/1/w/40/h/40" alt="">
                     </td>
                     <td width="80">
                         <a href="">fankay</a>
@@ -157,7 +214,7 @@
             <table class="talk-table">
                 <tr>
                     <td width="50">
-                        <img class="avatar" src="http://7xp5t4.com1.z0.glb.clouddn.com/Fqb8f9uDknAt2ilBoY-ipSZRMes-?imageView2/1/w/40/h/40" alt="">
+                        <img class="avatar" src="http://7xp5t4.com1.z0.glb.clouddn.com/Fqb8f9uDknAt2ilBoY-ipSZRMes-?imageView2/1/w/40/h/40?imageView2/1/w/40/h/40" alt="">
                     </td>
                     <td width="80">
                         <a href="">fankay</a>
@@ -233,64 +290,7 @@
             <table class="talk-table">
                 <tr>
                     <td width="50">
-                        <img class="avatar" src="http://7xp5t4.com1.z0.glb.clouddn.com/Fqb8f9uDknAt2ilBoY-ipSZRMes-?imageView2/1/w/40/h/40" alt="">
-                    </td>
-                    <td width="80">
-                        <a href="">fankay</a>
-                    </td>
-                    <td width="auto">
-                        <a href="#">写了一个可以把你网站所有 js 代码格式化成圣诞树的 NodeJS 库： js2image</a>
-                    </td>
-                    <td width="50" align="center">
-                        <span class="badge">12</span>
-                    </td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="talk-item">
-            <table class="talk-table">
-                <tr>
-                    <td width="50">
-                        <img class="avatar" src="http://7xp5t4.com1.z0.glb.clouddn.com/Fqb8f9uDknAt2ilBoY-ipSZRMes-?imageView2/1/w/40/h/40" alt="">
-                    </td>
-                    <td width="80">
-                        <a href="">fankay</a>
-                    </td>
-                    <td width="auto">
-                        <a href="#">写了一个可以把你网站所有 js 代码格式化成圣诞树的 NodeJS 库： js2image</a>
-                    </td>
-                    <td width="50" align="center">
-                        <span class="badge">12</span>
-                    </td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="talk-item">
-            <table class="talk-table">
-                <tr>
-                    <td width="50">
-                        <img class="avatar" src="http://7xp5t4.com1.z0.glb.clouddn.com/Fqb8f9uDknAt2ilBoY-ipSZRMes-?imageView2/1/w/40/h/40" alt="">
-                    </td>
-                    <td width="80">
-                        <a href="">fankay</a>
-                    </td>
-                    <td width="auto">
-                        <a href="#">写了一个可以把你网站所有 js 代码格式化成圣诞树的 NodeJS 库： js2image</a>
-                    </td>
-                    <td width="50" align="center">
-                        <span class="badge">12</span>
-                    </td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="talk-item">
-            <table class="talk-table">
-                <tr>
-                    <td width="50">
-                        <img class="avatar" src="http://7xp5t4.com1.z0.glb.clouddn.com/Fqb8f9uDknAt2ilBoY-ipSZRMes-?imageView2/1/w/40/h/40" alt="">
+                        <img class="avatar" src="http://7xp5t4.com1.z0.glb.clouddn.com/Fqb8f9uDknAt2ilBoY-ipSZRMes-?imageView2/1/w/40/h/40?imageView2/1/w/40/h/40" alt="">
                     </td>
                     <td width="80">
                         <a href="">fankay</a>

@@ -17,7 +17,7 @@ public class FoundPasswordServlet extends BaseServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        forward("foundpassword",req,resp);
+        forward("User/foundpassword",req,resp);
     }
 
     @Override

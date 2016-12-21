@@ -2,6 +2,7 @@ package com.lsg.web.user;
 
 import com.lsg.entity.User;
 import com.lsg.service.UserService;
+import com.lsg.util.StringUtils;
 import com.lsg.web.BaseServlet;
 
 import javax.servlet.ServletException;
@@ -16,7 +17,18 @@ public class ValidateEmailServlet extends BaseServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String email = req.getParameter("email");
-        System.out.println(email);
+        String type = req.getParameter("type");
+
+        if(StringUtils.isNotEmpty(type)&&"1".equals(type)){
+            User currentUser = getCurrentUser(req);
+            if (currentUser!=null){
+                if (currentUser.getEmail().equals(email)){
+                    renderText("true",resp);
+                    return;
+                }
+            }
+        }
+
 
         UserService userService = new UserService();
         User user = userService.findByEmail(email);
@@ -29,4 +41,6 @@ public class ValidateEmailServlet extends BaseServlet {
 
 
     }
+
+
 }

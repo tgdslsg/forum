@@ -20,9 +20,12 @@ import java.util.Map;
 @WebServlet("/login")
 public class LoginServlet extends BaseServlet {
 
+
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        forward("login",req,resp);
+        req.getSession().removeAttribute("curr_user");
+        forward("User/login",req,resp);
     }
 
     @Override
