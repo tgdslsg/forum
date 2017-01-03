@@ -18,4 +18,18 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 <display-name>Archetype Created Web Application</display-name>
+
+    <!-- URL过滤器 -->
+    <filter>
+        <filter-name>loginFilter</filter-name>
+        <filter-class>com.lsg.web.filter.LoginFilter</filter-class>
+        <init-param>
+            <param-name>validateUrl</param-name>
+            <param-value>/setting,/newtopic,/topicEdit,/notify</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>loginFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 </web-app>

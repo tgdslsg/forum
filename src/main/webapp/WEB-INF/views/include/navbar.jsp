@@ -13,6 +13,7 @@
         <a href="/home" class="brand">
             <i class="fa fa-coffee"></i>
         </a>
+        <span class="hide" id="isLogin"><c:if test="${not empty sessionScope.curr_user}">1</c:if></span>
         <ul class="unstyled inline pull-right">
             <c:choose>
                 <c:when test="${not empty sessionScope.curr_user}">
@@ -22,9 +23,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href=""><i class="fa fa-plus"></i></a>
+                        <a href="/newTopic"><i class="fa fa-plus"></i></a>
                     </li><li>
-                        <a href="#"><i class="fa fa-bell"></i></a>
+                        <a href="/notify"><i class="fa fa-bell"></i><span id="unreadCount" class="badge"></span></a>
                     </li><li>
                         <a href="/setting"><i class="fa fa-cog"></i></a>
                     </li><li>

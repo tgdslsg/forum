@@ -7,6 +7,7 @@ import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.ResultSetHandler;
 
 import com.lsg.exception.DataAccessException;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -55,4 +56,13 @@ public class DbHelp {
 
     }
 
+    public static Integer insert(String sql, Object... params) {
+        QueryRunner queryRunner = new QueryRunner(ConnectionManager.getDataSource());
+        try {
+            return queryRunner.insert(sql,new ScalarHandler<Long>(),params).intValue();
+        } catch (SQLException ex) {
+            logger.error("DbHelp执行{}错误",sql);
+            throw new DataAccessException("执行"+sql+"异常");
+        }
+    }
 }

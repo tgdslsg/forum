@@ -40,14 +40,12 @@ public class BaseServlet extends HttpServlet {
         HttpSession session= req.getSession();
         System.out.println(session);
         if(session.getAttribute("curr_user")==null){//curr_user登陆时放入session中的
-            System.out.println("jasckjsc");
+            System.out.println("从session中获取当前用户时，当前用户为null");
             return null;
-
         }else {
             User user = (User)session.getAttribute("curr_user");
-            System.out.println("wjjjjj"+user);
+            System.out.println("getCurrentUser获取当前用户成功用户为："+user);
             return user;
-
         }
     }
 }

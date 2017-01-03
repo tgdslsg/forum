@@ -3,8 +3,10 @@ package com.lsg.service;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.lsg.dao.LoginLogDao;
+import com.lsg.dao.NotifyDao;
 import com.lsg.dao.UserDao;
 import com.lsg.entity.LoginLog;
+import com.lsg.entity.Notify;
 import com.lsg.entity.User;
 import com.lsg.exception.ServiceException;
 import com.lsg.util.Config;
@@ -12,10 +14,11 @@ import com.lsg.util.Config;
 import com.lsg.util.StringUtils;
 import org.apache.commons.codec.digest.DigestUtils;
 import com.lsg.util.Email;
+import org.joda.time.DateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import sun.net.www.MimeTable;
 
+import java.sql.Timestamp;
 import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
@@ -26,6 +29,7 @@ import static com.lsg.entity.User.USERSTATE_ACTIVE;
 public class UserService {
 
 
+    private NotifyDao notifyDao = new NotifyDao();
     private UserDao userDao = new UserDao();
     private LoginLogDao loginLogDao = new LoginLogDao();
     private static Logger logger = LoggerFactory.getLogger(UserService.class);
@@ -221,13 +225,12 @@ public class UserService {
         String salt = Config.get("user.password.salt");
         if(DigestUtils.md5Hex( Config.get("user.password.salt")+ oldPassword).equals(user.getPassword())) {
 
-
-            System.out.println("jsk--------------");
             newPassword = DigestUtils.md5Hex(salt + newPassword);
             user.setPassword(newPassword);
             userDao.update(user);
             logger.debug("{}修改密码成功",user);
         } else {
+
             throw new ServiceException("原始密码错误");
         }
     }
@@ -238,5 +241,21 @@ public class UserService {
         user.setAvatar(fileKey);
         userDao.update(user);
         System.out.println("updateAvatar修改头像成功");
+    }
+
+    public List<Notify> findNotifyListByUser(User user) {
+        logger.info("执行findNotifyListByUser");
+        System.out.println(user);
+        return notifyDao.findByUserid(user.getId());
+    }
+    public void updateNotifyStateByIds(String ids) {
+        String idArray[] = ids.split(",");
+        for (int i= 0 ;i <idArray.length;i++ ){
+            Notify notify = notifyDao.findById(idArray[i]);
+            notify.setState(1);
+            notify.setReadtime(new Timestamp(DateTime.now().getMillis()));
+            notifyDao.update(notify);
+        }
+
     }
 }

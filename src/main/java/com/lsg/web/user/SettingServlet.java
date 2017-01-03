@@ -31,6 +31,7 @@ public class SettingServlet extends BaseServlet {
         String token = auth.uploadToken(Config.get("qiniu.bucket"));
 
         req.setAttribute("token",token);
+        System.out.println("wjecwkJ.");
         forward("User/setting",req,resp);
     }
 
@@ -40,7 +41,6 @@ public class SettingServlet extends BaseServlet {
         System.out.println(action);
         if ("profile".equals(action)){
             updateProfile(req,resp);
-            System.out.println(action);
         }else if ("password".equals(action)){
             updatePassword(req,resp);
             logger.info("选择password，准备修改");
